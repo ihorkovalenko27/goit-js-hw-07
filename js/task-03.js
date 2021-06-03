@@ -12,3 +12,16 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const createTag = images.map(image => {
+  const getNewMarkUp = `<li><img src = "${image.url}" alt ="${image.alt}" width = 420px height = 240px> </li>`;
+  return getNewMarkUp;
+});
+
+const addImage = document.querySelector('#gallery');
+
+addImage.insertAdjacentHTML('afterbegin', createTag.join(' '));
+
+const addStyle = addImage.classList.add('gallery-pic');
+
+console.log(addImage);

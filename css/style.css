@@ -1,0 +1,9 @@
+.gallery-pic {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 20px;
+
+  border: 4px double black;
+  list-style-type: none;
+}
