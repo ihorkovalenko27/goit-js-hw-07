@@ -1,11 +1,12 @@
 const countById = document.querySelector('#categories');
-console.log('В списке', countById.children.length, 'категории');
+console.log(' В списке', countById.children.length, 'категории');
 
 const searchElement = document.querySelectorAll('.item');
 searchElement.forEach(el =>
   console.log(
-    'Категория:',
+    ' Категория:',
     el.firstElementChild.textContent,
+    '\n',
     'Количество элементов:',
     el.lastElementChild.children.length,
   ),
