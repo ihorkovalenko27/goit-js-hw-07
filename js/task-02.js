@@ -6,6 +6,7 @@ const ingredients = [
   'Зелень',
   'Приправы',
 ];
+const listIngredients = document.querySelector('#ingredients');
 
 const newLi = ingredients.map(ingredient => {
   const madeLi = document.createElement('li');
@@ -13,7 +14,7 @@ const newLi = ingredients.map(ingredient => {
   return madeLi;
 });
 
-const listIngredients = document.querySelector('#ingredients');
+listIngredients.style.listStyleType = 'none';
 
 listIngredients.append(...newLi);
 
