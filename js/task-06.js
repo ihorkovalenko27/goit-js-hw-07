@@ -3,14 +3,16 @@ const getDataLength = getInput.getAttribute('data-length');
 
 getInput.addEventListener('blur', () => {
   if (getInput.value.length === +getDataLength) {
-    getInput.classList.add('valid');
-    getInput.classList.remove('invalid');
+    changeClass('valid', 'invalid');
   }
   if (
     getInput.value.length > getDataLength ||
     getInput.value.length < getDataLength
   ) {
-    getInput.classList.add('invalid');
-    getInput.classList.remove('valid');
+    changeClass('invalid', 'valid');
   }
 });
+
+function changeClass(add, remove) {
+  return getInput.classList.add(add), getInput.classList.remove(remove);
+}
